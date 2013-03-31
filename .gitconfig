@@ -1,0 +1,14 @@
+[user]
+name = Marcos Prieto
+email = marcospri@gmail.com 
+
+[core]
+editor = vim
+
+[color]
+diff = auto
+status = auto
+branch = auto
+interactive = auto
+pager = true
+ui = auto

@@ -1,9 +1,6 @@
 " Make Vim more useful
 set nocompatible
 
-"Colors
-set t_Co=256
-
 "Line numbers
 set number
 
@@ -12,6 +9,9 @@ set colorcolumn=80
 
 " show current position at bottom
 set ruler                       
+
+" Highlight current line
+set cursorline
 
 "syntax highlighing
 syntax on                           

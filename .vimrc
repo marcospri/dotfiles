@@ -1,5 +1,6 @@
 " Make Vim more useful
 set nocompatible
+filetype off
 
 "Line numbers
 set number
@@ -15,8 +16,6 @@ set cursorline
 
 "syntax highlighing
 syntax on                           
-"try to detect filetypes
-filetype on                          
 "enable loading indent file for filetype
 filetype plugin indent on    
 
@@ -37,3 +36,12 @@ set smartcase
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undo
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+
+set wildignore+=*/.git/*,*.pyc 
+
+filetype plugin indent on

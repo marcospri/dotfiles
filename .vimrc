@@ -43,6 +43,7 @@ Plugin 'gmarik/Vundle.vim'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'ervandew/supertab'
 
 set wildignore+=*/.git/*,*.pyc 
 

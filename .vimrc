@@ -37,8 +37,9 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undo
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'

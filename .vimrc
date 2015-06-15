@@ -44,7 +44,13 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
+Bundle 'altercation/vim-colors-solarized'
+call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 
 
 filetype plugin indent on
+
+set t_Co=256
+set background=dark
+colorscheme solarized

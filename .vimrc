@@ -1,6 +1,7 @@
 " Make Vim more useful
 set nocompatible
 filetype off
+filetype plugin indent off
 
 "Line numbers
 set number
@@ -13,11 +14,6 @@ set ruler
 
 " Highlight current line
 set cursorline
-
-"syntax highlighing
-syntax on                           
-"enable loading indent file for filetype
-filetype plugin indent on    
 
 "Indent with 4 spaces
 set expandtab
@@ -43,14 +39,23 @@ Plugin 'gmarik/Vundle.vim'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'ervandew/supertab'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'fatih/vim-go'
 Bundle 'altercation/vim-colors-solarized'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 
 
-filetype plugin indent on
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on 
+"syntax highlighing
+syntax on                           
 
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme molokai
+let mapleader=" "
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)

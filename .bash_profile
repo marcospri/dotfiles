@@ -6,3 +6,6 @@ export HISTSIZE=10000
 #This is needed to look decent on gnome:
 #	https://github.com/Anthony25/gnome-terminal-colors-solarized
 export TERM=screen-256color-bce
+
+#Needed for tmux
+. ~/.bashrc

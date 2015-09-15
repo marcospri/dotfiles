@@ -41,7 +41,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'fatih/vim-go'
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'nvie/vim-flake8'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 
@@ -50,12 +50,17 @@ set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on 
 "syntax highlighing
 syntax on                           
-
 set t_Co=256
-set background=dark
+set background=light
 colorscheme molokai
+set t_ut=""
+
+au FocusGained * :redraw!
+
 let mapleader=" "
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
+
+autocmd BufWritePost *.py call Flake8()

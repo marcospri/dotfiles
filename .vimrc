@@ -54,6 +54,8 @@ set t_Co=256
 set background=light
 colorscheme molokai
 set t_ut=""
+"Transparent background
+hi Normal ctermbg=none
 
 au FocusGained * :redraw!
 

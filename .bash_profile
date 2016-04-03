@@ -8,4 +8,5 @@ export HISTSIZE=10000
 export TERM=screen-256color-bce
 
 #Needed for tmux
+alias tmux="tmux -2"
 . ~/.bashrc

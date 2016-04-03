@@ -42,6 +42,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'fatih/vim-go'
 Bundle 'nvie/vim-flake8'
+Bundle 'ervandew/supertab'
+Bundle 'robertmeta/nofrils'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 
@@ -51,11 +53,8 @@ filetype plugin indent on
 "syntax highlighing
 syntax on                           
 set t_Co=256
-set background=light
-colorscheme molokai
+colorscheme nofrils-sepia
 set t_ut=""
-"Transparent background
-hi Normal ctermbg=none
 
 au FocusGained * :redraw!
 

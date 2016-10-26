@@ -1,6 +1,6 @@
 # Larger bash history (default is 500)
-export HISTFILESIZE=10000
-export HISTSIZE=10000
+export HISTFILESIZE=-1
+export HISTSIZE=-1
 
 #xterm colors
 #This is needed to look decent on gnome:

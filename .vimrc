@@ -20,6 +20,7 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set backspace=indent,eol,start
 
 "Highlight search
 set incsearch
@@ -38,7 +39,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
+Bundle 'w0rp/ale'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'fatih/vim-go'
 Bundle 'nvie/vim-flake8'
@@ -52,8 +53,8 @@ set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on 
 "syntax highlighing
 syntax on                           
-set t_Co=256
-colorscheme nofrils-sepia
+colorscheme solarized
+set background=dark
 set t_ut=""
 
 au FocusGained * :redraw!

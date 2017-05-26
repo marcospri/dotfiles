@@ -35,10 +35,11 @@ set incsearch
 set ignorecase
 set smartcase
 
-"Local dirs
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-set undodir=~/.vim/undo
+" Don't make backups at all
+set nobackup
+set nowritebackup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

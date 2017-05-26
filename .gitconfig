@@ -4,6 +4,7 @@ email = marcospri@gmail.com
 
 [core]
 editor = vim
+pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
 diff = auto
@@ -12,3 +13,10 @@ branch = auto
 interactive = auto
 pager = true
 ui = auto
+
+[alias]
+st = status
+ci = commit --verbose
+co = checkout
+aa = add --all
+

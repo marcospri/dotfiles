@@ -118,6 +118,7 @@ fi
 
 export PSQL_EDITOR="/usr/local/bin/vim"
 
+export TERM=xterm-256color-italic
 
 if [ -f ~/.dir_colors/dircolors ]
     then eval `dircolors ~/.dir_colors/dircolors`

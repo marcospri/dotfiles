@@ -3,8 +3,14 @@ set nocompatible
 filetype off
 filetype plugin indent off
 
+" remember more commands and search history
+set history=10000
+
 "Line numbers
 set number
+
+" Always show tab bar at the top
+set showtabline=2
 
 "Display max column lenght
 set colorcolumn=80
@@ -42,9 +48,12 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'w0rp/ale'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'fatih/vim-go'
-Bundle 'nvie/vim-flake8'
 Bundle 'ervandew/supertab'
 Bundle 'robertmeta/nofrils'
+Bundle 'morhetz/gruvbox'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
+Bundle 'ElmCast/elm-vim'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 
@@ -53,13 +62,18 @@ set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on 
 "syntax highlighing
 syntax on                           
-colorscheme solarized
-set background=dark
+
+" colors
+set termguicolors
 set t_ut=""
+colorscheme gruvbox
+set background=dark
 
 au FocusGained * :redraw!
 
-let mapleader=" "
+set pastetoggle=<F2>
+
+let mapleader=","
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)

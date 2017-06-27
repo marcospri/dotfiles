@@ -48,18 +48,13 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'w0rp/ale'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'fatih/vim-go'
 Bundle 'ervandew/supertab'
-Bundle 'robertmeta/nofrils'
 Bundle 'morhetz/gruvbox'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
 Bundle 'ElmCast/elm-vim'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 
 
-set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on 
 "syntax highlighing
 syntax on                           
@@ -75,10 +70,9 @@ au FocusGained * :redraw!
 set pastetoggle=<F2>
 
 let mapleader=","
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <leader>d <Plug>(go-def)
 
-autocmd BufWritePost *.py call Flake8()
+
+" ale (autocompletion)
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+

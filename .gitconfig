@@ -20,3 +20,5 @@ ci = commit --verbose
 co = checkout
 aa = add --all
 
+[pull]
+	rebase = true

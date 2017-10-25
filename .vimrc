@@ -41,6 +41,8 @@ set nowritebackup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
+set clipboard^=unnamed,unnamedplus
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -48,9 +50,10 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'w0rp/ale'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'ervandew/supertab'
 Bundle 'morhetz/gruvbox'
 Bundle 'ElmCast/elm-vim'
+Bundle 'mhinz/vim-grepper'
+Bundle 'christoomey/vim-tmux-navigator'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 
@@ -75,4 +78,9 @@ let mapleader=","
 " ale (autocompletion)
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" auto closing of the preview window when the user accepts the offered completion string
+let g:ycm_autoclose_preview_window_after_completion=1
+
+nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 

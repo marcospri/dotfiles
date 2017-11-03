@@ -52,8 +52,8 @@ Bundle 'w0rp/ale'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'morhetz/gruvbox'
 Bundle 'ElmCast/elm-vim'
-Bundle 'mhinz/vim-grepper'
 Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'editorconfig/editorconfig-vim'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 

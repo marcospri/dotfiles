@@ -83,4 +83,5 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ycm_autoclose_preview_window_after_completion=1
 
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>u :YcmCompleter GoToReferences<CR>
 

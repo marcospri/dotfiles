@@ -3,6 +3,8 @@ set nocompatible
 filetype off
 filetype plugin indent off
 
+set hidden
+
 " remember more commands and search history
 set history=10000
 
@@ -38,8 +40,7 @@ set smartcase
 " Don't make backups at all
 set nobackup
 set nowritebackup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set noswapfile
 
 set clipboard^=unnamed,unnamedplus
 
@@ -85,3 +86,4 @@ let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>u :YcmCompleter GoToReferences<CR>
 
+nnoremap <leader>p :CtrlPBuffer<CR>

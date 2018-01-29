@@ -48,13 +48,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
 Bundle 'w0rp/ale'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'morhetz/gruvbox'
 Bundle 'ElmCast/elm-vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'junegunn/fzf'
+Bundle 'junegunn/fzf.vim'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 
@@ -75,6 +76,10 @@ set pastetoggle=<F2>
 
 let mapleader=","
 
+
+" fzf fuzzy search
+nnoremap <c-p> :Files<cr>
+nnoremap <c-b> :Buffers<cr>
 
 " ale (autocompletion)
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)

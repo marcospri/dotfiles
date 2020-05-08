@@ -33,6 +33,10 @@ set backspace=indent,eol,start
 "Highlight search
 set incsearch
 
+" File backed undo
+set undofile
+set undodir=~/.vim/undodir
+
 "Make searches case-sensitive only if they contain upper-case characters
 set ignorecase
 set smartcase
@@ -42,8 +46,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-set clipboard^=unnamed,unnamedplus
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -51,11 +53,12 @@ Bundle 'gmarik/vundle'
 Bundle 'w0rp/ale'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'morhetz/gruvbox'
-Bundle 'ElmCast/elm-vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'junegunn/fzf'
 Bundle 'junegunn/fzf.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'ambv/black'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 
@@ -80,6 +83,7 @@ let mapleader=","
 " fzf fuzzy search
 nnoremap <c-p> :Files<cr>
 nnoremap <c-b> :Buffers<cr>
+nnoremap <c-g> :Ag<cr>
 
 " ale (autocompletion)
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
@@ -91,4 +95,7 @@ let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>u :YcmCompleter GoToReferences<CR>
 
-nnoremap <leader>p :CtrlPBuffer<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
+
+autocmd BufWritePre *.py execute ':Black'
+

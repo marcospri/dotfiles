@@ -14,7 +14,7 @@ set number
 " Always show tab bar at the top
 set showtabline=2
 
-"Display max column lenght
+"Display max column length
 set colorcolumn=80
 
 " show current position at bottom
@@ -46,6 +46,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Using another spellchecker
+set nospell
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -58,7 +61,10 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'junegunn/fzf'
 Bundle 'junegunn/fzf.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'ambv/black'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'ervandew/supertab'
+Bundle 'ycm-core/YouCompleteMe'
+Bundle 'kamykn/spelunker.vim'
 call vundle#end() 
 
 set wildignore+=*/.git/*,*.pyc 

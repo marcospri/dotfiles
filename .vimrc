@@ -103,5 +103,8 @@ nnoremap <leader>u :YcmCompleter GoToReferences<CR>
 
 nnoremap <leader>nt :NERDTreeToggle<CR>
 
-autocmd BufWritePre *.py execute ':Black'
+" Black auto-formatting
+" autocmd BufWritePre *.py execute ':Black'
 
+" Jedi's splits (ie go to definition) location
+let g:jedi#use_splits_not_buffers = "right"

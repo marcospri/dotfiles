@@ -67,7 +67,7 @@ Bundle 'ycm-core/YouCompleteMe'
 Bundle 'kamykn/spelunker.vim'
 call vundle#end() 
 
-set wildignore+=*/.git/*,*.pyc 
+set wildignore+=*/.git/*,*.pyc,*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/*,*/.vim$,\~$,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.log,*/.ist
 
 filetype plugin indent on 
 "syntax highlighing

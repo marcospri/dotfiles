@@ -23,3 +23,6 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15 && \
 
 # Show language menu in the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
+
+# Disable double space for .
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false

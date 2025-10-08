@@ -20,9 +20,12 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false && \
 defaults write NSGlobalDomain KeyRepeat -int 2 && \
 defaults write NSGlobalDomain InitialKeyRepeat -int 15 && \
 
-
 # Show language menu in the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Disable double space for .
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Fixes weirdness in aerospace 
+# https://nikitabobko.github.io/AeroSpace/guide#a-note-on-displays-have-separate-spaces
+defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
